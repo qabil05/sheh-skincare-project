@@ -1,0 +1,1 @@
+import {Router} from 'express';import * as c from '../controllers/catalog.js';const r=Router();r.get('/products',c.products);r.get('/products/:slug',c.product);r.get('/categories',c.categories);r.get('/ingredients',c.ingredients);r.get('/journal',c.journal);r.get('/journal/:slug',c.journalPost);r.post('/contact',c.contact);export default r;

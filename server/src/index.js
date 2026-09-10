@@ -1,0 +1,2 @@
+import express from 'express';import cors from 'cors';import 'dotenv/config';import api from './routes/api.js';
+const app=express();const PORT=Number(process.env.PORT||5001);app.use(cors({origin:process.env.CLIENT_ORIGIN||'http://localhost:3000'}));app.use(express.json({limit:'1mb'}));app.get('/api/health',(req,res)=>res.json({ok:true,brand:'Sheh'}));app.use('/api',api);app.use((err,req,res,next)=>{console.error(err);res.status(500).json({message:'Unexpected server error'})});app.listen(PORT,()=>console.log(`Sheh API: http://localhost:${PORT}`));
