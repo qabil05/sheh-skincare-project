@@ -19,7 +19,7 @@ export default function Footer() {
         <div><p className="micro">Sheh</p><Link href="/about">Our Story</Link><Link href="/journal">Journal</Link><Link href="/contact">Contact</Link></div>
         <div><p className="micro">Follow</p><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Are.na</a></div>
       </div>
-      <div className="footer-base"><span>© 2026 Sheh. All rights reserved.</span><span>Designed around light, water, glass & botanicals.</span></div>
+      <div className="footer-disclaimer">This website was created as a design template and concept showcase. It does not represent a real company, brand or products. Nothing is offered for sale.</div>\n      <div className="footer-base"><span>© 2026 Sheh. All rights reserved.</span><span>Designed around light, water, glass & botanicals.</span></div>
     </footer>
   );
 }
