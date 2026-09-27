@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getJournalPost } from '@/lib/data';
+import { journal, getJournalPost } from '@/lib/data';
+
+export function generateStaticParams() {
+  return journal.map((post) => ({ slug: post.slug }));
+}
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
